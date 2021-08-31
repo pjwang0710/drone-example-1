@@ -7,10 +7,16 @@ steps:
     image: python
     commands:
       - sleep 5
-      - echo $PWD
       - pip install -r requirements.txt
       - python app.py
  
 services:
 - name: redis
   image: redis
+  volumes:
+    - name: redisdb
+      path: /data
+volumes:
+  - name: redisdb
+    host:
+      path: /drone/src/rdb
