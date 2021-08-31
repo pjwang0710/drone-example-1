@@ -19,4 +19,4 @@ services:
 volumes:
   - name: redisdb
     host:
-      path: tmp/drone-example/rdb
+      path: /tmp/drone-example/rdb
