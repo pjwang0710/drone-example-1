@@ -13,10 +13,3 @@ steps:
 services:
 - name: redis
   image: redis
-  volumes:
-    - name: redisdb
-      path: /data
-volumes:
-  - name: redisdb
-    host:
-      path: /tmp/drone-example/rdb
