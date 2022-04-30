@@ -19,4 +19,4 @@ services:
 volumes:
   - name: redisdb
     host:
-      path: /tmp/drone/drone-example/rdb
+      path: /home/ubuntu/drone-example-1/rdb
