@@ -1,21 +1,12 @@
 kind: pipeline
-name: example-drone
-type: docker
+type: exec
+name: default
+
+platform:
+  os: linux
+  arch: amd64
 
 steps:
-  - name: test and code coverage
-    commands:
-      - sleep 5
-      - pip install -r requirements.txt
-      - python app.py
- 
-services:
-- name: redis
-  image: redis
-  volumes:
-    - name: redisdb
-      path: /data
-volumes:
-  - name: redisdb
-    host:
-      path: /home/ubuntu/drone-example-1/rdb
+- name: greeting
+  commands:
+  - echo hello world
