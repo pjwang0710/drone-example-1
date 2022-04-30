@@ -4,7 +4,6 @@ type: docker
 
 steps:
   - name: test and code coverage
-    image: python:latest
     commands:
       - sleep 5
       - pip install -r requirements.txt
