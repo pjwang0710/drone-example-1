@@ -8,7 +8,7 @@ steps:
     commands:
       - whoami
       - pwd
-      - sleep 6
+      - sleep 7
       - pip install -r requirements.txt
       - python app.py
  
